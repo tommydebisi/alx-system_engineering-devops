@@ -1,2 +1,2 @@
 # BASH Scripting - Loops, conditions and parsing
-> Documentation loading...
+**Learning the Use of Loops to automate operations in the unix system**
