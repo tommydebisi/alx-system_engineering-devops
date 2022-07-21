@@ -12,7 +12,7 @@ file="school"
 if [ -e "$file" ]
 then
     echo "school file exists"
-    if [ ! -s "$file" ] # space need after not to inverse the boolean result
+    if [ ! -s "$file" ] # space needed after not(!) to inverse the boolean result
     then
         echo "school file is empty"
     fi
