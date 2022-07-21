@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# This script loops from 1-10 displays bad luck, good luck and best school on the 4th, 8th and other iterations respectively
+
+iterator=1
+
+while (( iterator <= 10 ))
+do
+    if [ "$iterator" -eq "4" ]
+    then
+        echo "bad luck"
+    elif [ "$iterator" -eq "8" ]
+    then
+        echo "good luck"
+    else
+        echo "Best School"
+    fi
+
+    iterator=$(( iterator + 1 ))
+done
