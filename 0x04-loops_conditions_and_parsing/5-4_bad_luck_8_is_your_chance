@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-# This script loops from 1-10 displays bad luck, good luck and best school on the 4th, 8th and other iterations respectively
+# This script loops from 1-10 and:
+# displays bad luck for the 4th loop iteration
+# displays good luck for the 8th loop iteration
+# displays Best School for the other iterations
 
 iterator=1
 
