@@ -7,10 +7,13 @@ while [ "$number" -le "20" ]
 do
     case $number in
         "4" )
+            echo "$number"
             echo "bad luck from China" ;;
         "9" )
+            echo "$number"
             echo "bad luck from Japan" ;;
         "17" )
+            echo "$number"
             echo "bad luck from Italy" ;;
         * )
             echo "$number" ;;
