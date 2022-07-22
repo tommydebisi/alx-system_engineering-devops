@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # This script displays "To infinity and beyond" indefinitely.
 
-trap "echo Terminated; exit 130" SIGINT    # trap used to target signal and exit cleanly   
 while true
 do
     echo "To infinity and beyond"
