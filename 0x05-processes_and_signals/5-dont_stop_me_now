@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script stops 4-to_infinity_and_beyond process.
 
-kill $(ps aux | pgrep bash | tr "\n" " " | awk '{print $3}')
+kill -15 "$(ps aux | pgrep bash | tr "\n" " " | awk '{print $3}')"
