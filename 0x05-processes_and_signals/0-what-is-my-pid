@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This Script displays it's own pid
+
+ps | grep bash | awk '{print $1}'
