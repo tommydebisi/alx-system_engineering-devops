@@ -8,5 +8,5 @@
 - Knowledge of `pgrep` and `ps` to display a particular process or all the processes running in bash
 - Knowledge of `xarg` to execute a piped command
 
-**Aside those function i learnt the use of `&` single ampersand to duplicate processes in bash**
+**Aside those functions i learnt the use of `&` single ampersand to duplicate processes in bash**
 **Thank you!!😁**
