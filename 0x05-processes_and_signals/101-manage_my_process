@@ -3,26 +3,27 @@
 # shellcheck disable=SC1091
 . /lib/lsb/init-functions
 
+file="/var/run/my_process.pid"
 function start()
 {
     ./manage_my_process &
-    echo $! > /var/run/my_process.pid # $! to get child pid
+    echo $! > $file # $! to get child pid
     echo "manage_my_process started"
 }
 
 function stop()
 {
-    kill -15 "$(cat /var/run/my_process.pid)"
+    kill -15 "$(cat $file)"
     echo "manage_my_process stopped"
-    rm /var/run/my_process.pid
+    rm $file
 }
 
 function restart()
 {
-    kill -15 "$(cat /var/run/my_process.pid)" # kill child pid
-    rm /var/run/my_process.pid
+    kill -15 "$(cat $file)" # kill child pid
+    rm $file
     ./manage_my_process &
-    echo $! > /var/run/my_process.pid # $! to get child pid
+    echo $! > $file # $! to get child pid
     echo "manage_my_process restarted"
 }
 
