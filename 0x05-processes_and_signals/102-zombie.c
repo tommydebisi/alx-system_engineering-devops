@@ -1,4 +1,3 @@
-#include <sys/types.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -30,16 +29,12 @@ int main(void)
 	{
 		child_pid = fork();
 		if (child_pid == -1)
-		{
-			perror("fork");
-			exit(1);
-		}
+			break;
 		else if (child_pid == 0)
-		{
-			printf("Zombie process created, PID: %d\n", getpid());
-
 			exit(0);
-		}
+		else
+			printf("Zombie process created, PID: %d\n", child_pid);
 	}
 	infinite_while();
+	return (0);
 }
