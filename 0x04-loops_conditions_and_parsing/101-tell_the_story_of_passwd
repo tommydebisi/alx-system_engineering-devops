@@ -3,7 +3,7 @@
 
 file="/etc/passwd"
 
-while read -r line
+while IFS= read -r line
 do
     username=$(echo -n "$line" | cut -d ':' -f 1) # -n tells echo to ignore newline
     password=$(echo -n "$line" | cut -d ':' -f 2)
