@@ -1,2 +1,2 @@
 # Start of Regular expression in Bash
-> Documentation loading...
+**Learning and use of functions to perform **REGEX** operations using Ruby**
