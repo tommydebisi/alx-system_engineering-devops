@@ -1,0 +1,14 @@
+- The elements added were firewall, SSl certificate and monitoring tools. firewall is needed in the system as it is used to filter the user/client request from the public network(Internet) to the private network. Firewall also protects the server from malicious content and cyber attacks.
+    SSL certificate is needed for secure connection, it's needed most especially if a user is entering card details it'll prevent the detail from being intercepted by a cyber attacker
+    Monitoring tools are key tools needed to read and record metrics then alert if the server cpu or disk space is running based on the configuration.
+
+- Firewalls are needed to filter the trafic coming to a server from the public network to private network
+- Traffic is served over HTTPS to ensure secure connection
+- The monitoring tool reads and records the metrics of each server and alerts if there's an issue or potential issue
+- To monitor the QPS (Queries Per Second) i'd make use of the appropraite monitoring tool for that.
+
+
+Issues with the infrastructure
+- Terminating at the load balancer level is an issue because there's a chance of the message to be intercepted by a cyber attacker
+-  Having one MySQL database accepting writes is an issue because it the database crashes the application can't get the user's data again from the database till the issue is solved.
+- Servers with same components are not sharing the same file system but are at the same time sharing the same data because of constant update in the slave server.

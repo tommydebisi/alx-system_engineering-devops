@@ -1,0 +1,16 @@
+- For the additional server added, it's added to increase redundancy in the system and clear all SPOFs (Single Point of Failures) in the infrastructure in the diagram that can be caused by server shutdown
+
+- The load balancer in the diagram is configured with the weighted least connection algorithm whereby the server with the least amount of connection accept the concurrent request of the user sending a request at that given time
+
+- The load balancer in the diagram above is enabling an Active-Active setup whereby the three servers are running at the same time and displaying or hosting same content
+
+- In the database primary replica (Master-Slave) cluster, the slave server as the replica and acts as a fallback when the master has issues and stops running. The master is the main database the system use to get and store user information
+
+- The Primary Node in the application is the main node which the application uses to serve clients and the replica is the not necessary node but present to use as a fallback and to prevent SPOF(Single Point Of Failure)
+
+- The SPOF(Single Point of Failure) is spotted in the load balancer and database in the diagram, when the load balancer is faulty and has issues
+the system collapses ultimately
+
+- The infrastructure lack the use of Firewalls/security to filter requests coming in from the pulic network to the private networks and by not using firewalls the system is prone to cyber attacks which can destroy the system
+
+- The infrastructure lacks monitoring which is needed to read the metrics of the servers and alert if the server's cpu or disk usage is high or there's something wrong with the application

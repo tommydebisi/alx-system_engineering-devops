@@ -1,0 +1,18 @@
+- The server in the diagram is a dedicated commputer used to serve the client computer requests
+- Domain name is used to locate and get the server's ip address in the diagram from the DNS server
+- The CNAME record is in www.foobar.com, due to the quirk of dns you can't have any other record once a CNAME record is used on host. But with the www it's possible
+- Web server is  a server used to host and serve web content
+- Application server is the logical part of the web content, it's usually serves the web server
+- Database is the storage engine of the server, it's used to store client or user data that are valuable
+- the server uses the transfer protocol (HTTP - hypertext Transfer Protocol) to communicate with the user's computer
+
+Issues with the web Infrastructure
+- SPOF (Single Point Of Failure):
+    In the web infrastructure provided there are more than one SPOFs. The first SPOF spotted is in the occurence of only one server in the system, if the server crashes the entire system comes to an halt.
+    In the MySQL database engine SPOF is spotted there too, due to the presence of only on storage engine if the storage engine has issues and stops working the user won't be able to get his/her data to login or notifications on the site
+
+- Downtime when maintenance needed:
+    The downside to the server in the diagram is because of there's only one server in the system, when maintenane is conducted on the server it's completely shutdown which leads to loss of capital/revenue to the company during the period of maintenance
+
+- Cannot scale if too much incoming traffic:
+    If the server becomes a very popular and the number of requests are increased greatly the server will become siginficantly slow and unscalable due to the presence of only one server in the system.
