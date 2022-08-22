@@ -1,0 +1,2 @@
+- Addition of load balancer to increase the scalability of the system in the diagram and prevent SPOF (Single Point Of Failure)
+  at the load balancer level
