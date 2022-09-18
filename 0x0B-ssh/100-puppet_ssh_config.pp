@@ -2,4 +2,5 @@
 
 exec { 'echo':
   command => '/usr/bin/echo "\tIdentityFile ~/.ssh/school\n\tPasswordAuthentication no" >> /etc/ssh/ssh_config',
+  returns  =>  [0, 1],
 }
