@@ -6,6 +6,7 @@ apt-get -y install nginx
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
 echo "Ceci n'est pas une page" > /var/www/html/error.html
 
-sed -i "/server_name _;/a \\\n\terror_page 404 /error.html\n\n\tlocation /redirect_me \
- {\n\t\treturn 301 https://www.google.com;\n\t}" /etc/nginx/sites-available/default
+sed -i "/server_name _;/a \\\n\terror_page 404 /error.html; \
+        \n\n\tlocation /redirect_me \
+        {\n\t\treturn 301 https://www.google.com;\n\t}" /etc/nginx/sites-available/default
 service nginx restart
