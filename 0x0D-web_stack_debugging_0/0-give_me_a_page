@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script debugs the docker container which is meant to run apache2
+# but doesn't run
+
+service apache2 start
