@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Debugging a server that is not running a required page
+
+rm /etc/nginx/sites-enabled/default
+# create a symbolic link to site enabled
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx start
