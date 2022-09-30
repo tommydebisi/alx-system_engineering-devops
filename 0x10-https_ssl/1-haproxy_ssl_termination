@@ -36,6 +36,7 @@ defaults
 # HAproxy for web servers
 
 frontend web_frontend
+        bind *:80
         bind *:443 ssl crt /etc/letsencrypt/live/www.tommyade.tech/fullchain.pem
         mode http
         default_backend web_backend
