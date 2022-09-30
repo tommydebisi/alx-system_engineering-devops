@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 # Debugging a server that is not running a required page
 
-rm /etc/nginx/sites-enabled/default
-sed -i 's/listen [::]:80 default_server ipv6only=on;/listen [::]:80 default_server;/g' /etc/nginx/sites-available/default
-ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx start
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+service nginx restart
