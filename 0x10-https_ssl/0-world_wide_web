@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# This script will display information about subdomains
+
+get_str () {
+    DOMAIN=$(dig "$2.$1" | grep -A1 'ANSWER SECTION:' | grep -v 'ANSWER SECTION:')
+    SUB=$(echo "$DOMAIN" | awk -F "." '{print $1}')
+    RECORD=$(echo "$DOMAIN" | awk '{print $4}')
+    DESTINATION=$(echo "$DOMAIN" | awk '{print $5}')
+
+    echo "The subdomain $SUB is a $RECORD record and points to $DESTINATION"
+}
+
+if [ $# == 2 ]
+then
+    get_str "$1" "$2"
+else
+    get_str "$1" "www"
+    get_str "$1" "lb-01"
+    get_str "$1" "web-01"
+    get_str "$1" "web-02"
+fi
