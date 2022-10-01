@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 # Debugging a server that is not running a required page
-sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
+
+rm /etc/nginx/sites-enabled/default
+# create a symbolic link as it should be
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
