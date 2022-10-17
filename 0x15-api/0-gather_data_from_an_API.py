@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+    Api usage
+"""
 import requests
 from sys import argv, exit
 
