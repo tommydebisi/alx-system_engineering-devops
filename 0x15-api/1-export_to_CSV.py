@@ -28,7 +28,7 @@ if __name__ == "__main__":
     # get tasks done by user
     todo = requests.get(todo_url)
     with open('USER_ID.csv', 'w', encoding="utf-8") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         new_list = list()
         for attr in todo.json():
             new_list.append(argv[1])
