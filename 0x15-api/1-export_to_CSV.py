@@ -20,7 +20,7 @@ if __name__ == "__main__":
         user_url = '{}/users/{}'.format(url, u_id)
         # get user's name
         user = requests.get(user_url)
-        user_name = user.json().get('name')
+        user_name = user.json().get('username')
 
         # get tasks done by user
         todo = requests.get(todo_url)
@@ -30,4 +30,4 @@ if __name__ == "__main__":
                 writer.writerow([u_id, user_name, attr.get('completed'),
                                 attr.get('title')])
     except Exception:
-        exit(1)
+        exit
