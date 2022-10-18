@@ -14,20 +14,17 @@ if __name__ == "__main__":
 
         count = 1
         u_id = argv[1]
+        url = 'https://jsonplaceholder.typicode.com'
 
-        todo_url = 'https://jsonplaceholder.typicode.com/todos?userId={}'.format(
-            u_id
-        )
-        user_url = 'https://jsonplaceholder.typicode.com/users/{}'.format(
-            u_id
-        )
+        todo_url = '{}/todos?userId={}'.format(url, u_id)
+        user_url = '{}/users/{}'.format(url, u_id)
         # get user's name
         user = requests.get(user_url)
         user_name = user.json().get('name')
 
         # get tasks done by user
         todo = requests.get(todo_url)
-        with open('{}.csv'.format(u_id), 'x', newline='') as f:
+        with open('{}.csv'.format(u_id), 'x', encoding="utf-8") as f:
             writer = csv.writer(f, quoting=csv.QUOTE_ALL)
             for attr in todo.json():
                 writer.writerow([u_id, user_name, attr.get('completed'),
