@@ -35,4 +35,4 @@ if __name__ == "__main__":
     ))
     for attr in todo.json():
         if attr.get('completed') is True:
-            print('\t{}'.format(attr.get('title')))
+            print('\t {}'.format(attr.get('title')))
