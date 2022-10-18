@@ -2,8 +2,8 @@
 """
     Api usage and exporting to csv
 """
-import requests
 import csv
+import requests
 from sys import argv, exit
 
 
