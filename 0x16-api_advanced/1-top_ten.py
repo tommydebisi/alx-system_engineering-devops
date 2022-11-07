@@ -23,4 +23,3 @@ def top_ten(subreddit):
             print(hot_children[index].get('data').get('title'))
     else:
         print(None)
-
