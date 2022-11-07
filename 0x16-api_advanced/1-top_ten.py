@@ -17,9 +17,10 @@ def top_ten(subreddit):
     }
 
     res = requests.get(url, headers=headers)
-    if not res or res.status_code != 200:
-        return None
+    if res and res.status_code == 200:
+        hot_children = res.json().get('data').get('children')
+        for index in range(10):
+            print(hot_children[index].get('data').get('title'))
+    else:
+        print(None)
 
-    hot_children = res.json().get('data').get('children')
-    for index in range(10):
-        print(hot_children[index].get('data').get('title'))
