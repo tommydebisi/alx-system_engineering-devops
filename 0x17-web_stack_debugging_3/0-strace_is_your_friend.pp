@@ -1,3 +1,5 @@
+# Corrects the error on a apache web server
+
 exec { 'debug_php_file':
   path     =>  ['/usr/bin', '/bin'],
   provider =>  shell,
